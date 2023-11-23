@@ -35,9 +35,11 @@ function Home() {
     }
     return [screenScale, screenPosition, rotation];
   };
+
   const [islandScale, islandPosition, islandRotation] =
     adjustIslandForScreenSize();
   const [planeScale, planePosition, planeRotation] = adjustPlaneForScreenSize();
+
   return (
     <section className="w-full h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
@@ -69,8 +71,8 @@ function Home() {
           />
           <Plane
             isRotating={isRotating}
-            planeScale={planeScale}
-            planePosition={planePosition}
+            scale={planeScale}
+            position={planePosition}
             rotation={planeRotation}
           />
         </Suspense>
